@@ -79,6 +79,8 @@ def create_folders_from_list(folder_list: list) -> None:
     # TODO: Implement this function and remove the temporary pass
     for folder in folder_list:
         try: 
+            folder = folder.lower()
+            folder = folder.replace(" ","")
             list_folder = data_path.joinpath(folder)
             list_folder.mkdir(exist_ok=True)
         except:
